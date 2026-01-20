@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.animation-rolling {
+  animation: rolling 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+.animation-rolling-last {
+  animation: rolling-last 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rolling {
+  0% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes rolling-last {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50px;
+  }
+}
