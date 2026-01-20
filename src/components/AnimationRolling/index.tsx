@@ -1,18 +1,16 @@
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState } from "react";
 
 export const TYPES_ICON = ["shoe", "dress", "ring", "bag", "lipstick", "hat"];
 
-const AnimationRolling = memo(() => {
+export default function AnimationRolling() {
   const [position, setPosition] = useState(0);
   useEffect(() => {
-    const interverl = setInterval(() => {
-      const type = position >= TYPES_ICON.length - 1 ? 0 : position + 1;
-      setPosition(type);
+    const interval = setInterval(() => {
+      setPosition((prev) => (prev >= TYPES_ICON.length - 1 ? 0 : prev + 1));
     }, 1500);
-    return () => {
-      clearInterval(interverl);
-    };
-  }, [position]);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const renderIcon = (pos: number) => {
     const type = TYPES_ICON[pos];
@@ -50,7 +48,4 @@ const AnimationRolling = memo(() => {
       </span>
     </span>
   );
-});
-
-AnimationRolling.displayName = "AnimationRolling";
-export default AnimationRolling;
+}
