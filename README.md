@@ -60,12 +60,6 @@ npm run preview
 ```bash
 # Run tests
 npm test
-
-# Run tests with UI
-npm run test:ui
-
-# Run tests with coverage
-npm run test:coverage
 ```
 
 ## Architecture
