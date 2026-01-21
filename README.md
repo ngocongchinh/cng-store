@@ -115,15 +115,6 @@ The autocomplete component implements the ARIA combobox pattern with:
 
 ## Testing
 
-### Test Coverage
-
-- **Hooks**: State management, side effects, cleanup
-- **Components**: Rendering, user interactions, accessibility
-- **Services**: API calls, error handling, caching
-- **Utilities**: Edge cases, different input scenarios
-
-### Test Files
-
 All test files are co-located with their source files using the `.spec.ts` or `.spec.tsx` naming convention:
 
 - `src/hooks/useDebounce.spec.ts`
